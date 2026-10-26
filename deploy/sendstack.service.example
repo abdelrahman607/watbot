@@ -1,0 +1,21 @@
+# انسخ إلى /etc/systemd/system/sendstack.service وعدّل المسارات والمستخدم
+# sudo systemctl daemon-reload && sudo systemctl enable --now sendstack
+
+[Unit]
+Description=SendStack (Next.js + WhatsApp)
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+WorkingDirectory=/var/www/sendstack
+Environment=NODE_ENV=production
+Environment=PORT=3000
+Environment=PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
+# أو: EnvironmentFile=/var/www/sendstack/.env.production.local
+ExecStart=/usr/bin/npm run start
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /faq
+Allow: /privacy
+Disallow: /dashboard
+Disallow: /api/
+
+# AI Crawlers — explicitly allowed for AEO
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://sender.qobouli.com/sitemap.xml

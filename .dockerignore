@@ -1,0 +1,5 @@
+node_modules
+.next
+.wwebjs_auth
+.wwebjs_cache
+.git
